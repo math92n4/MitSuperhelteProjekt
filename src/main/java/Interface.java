@@ -33,8 +33,11 @@ public class Interface {
                 System.out.println("Indtast superkræfter: ");
                 String superkræfter = s.nextLine();
 
+                System.out.println("Indtast virkelige navn: ");
+                String rigtigeNavn = s.nextLine();
+
                 System.out.println("Er superhelten et menneske? (ja/nej)");
-                String erMenneske = s.nextLine();
+                String erMenneske = s.next();
                 // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
@@ -50,7 +53,10 @@ public class Interface {
                     }
                 }
 
-                database.lavSuperhelt(superhelteNavn, superkræfter, erMenneske, årSkabt);
+                System.out.println("Indtast styrke: ");
+                int styrke = s.nextInt();
+
+                database.lavSuperhelt(superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
             }
 
             else if (menuvalg == 2) {
@@ -84,6 +90,10 @@ public class Interface {
                 System.out.println("Indtast superkræfter: ");
                 String superkræfter = s.next();
 
+                System.out.println("Indtast virkelige navn: ");
+                String rigtigeNavn = s.nextLine();
+                s.nextLine();
+
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
                 // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
@@ -102,7 +112,10 @@ public class Interface {
 
                 }
 
-                database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, erMenneske, årSkabt);
+                System.out.println("Indtast styrke: ");
+                int styrke = s.nextInt();
+
+                database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
 
             } else if (menuvalg == 9) {
                 System.out.println("Programmet afluttes");

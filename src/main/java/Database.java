@@ -5,8 +5,8 @@ public class Database {
     private ArrayList<Superhelt> superhelte = new ArrayList<>();
 
 
-    public void lavSuperhelt(String superhelteNavn, String styrker, String erMenneske, int årSkabt) {
-        Superhelt superhelt = new Superhelt(superhelteNavn, styrker, erMenneske, årSkabt);
+    public void lavSuperhelt(String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, int styrke) {
+        Superhelt superhelt = new Superhelt(superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
         superhelte.add(superhelt);
     }
 
@@ -16,9 +16,11 @@ public class Database {
         } else {
             for (Superhelt liste : superhelte) {
                 System.out.println("Superhelt: " + liste.getSuperhelteNavn());
-                System.out.println("Styrker: " + liste.getStyrker());
+                System.out.println("Superkræfter: " + liste.getSuperkræfter());
+                System.out.println("Rigtige navn: " + liste.getRigtigeNavn());
                 System.out.println("Er menneske: " + liste.getErMenneske());
                 System.out.println("År skabt: " + liste.getÅrSkabt());
+                System.out.println("Styrke: " + liste.getStyrke());
             }
         }
     }
@@ -39,19 +41,25 @@ public class Database {
 
     }
 
-    public void redigerSuperhelt(int superhelteId, String superhelteNavn, String superkræfter, String erMenneske, int årSkabt) {
+    public void redigerSuperhelt(int superhelteId, String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, int styrker) {
         Superhelt superhelt = superhelte.get(superhelteId - 1);
         if(!superhelteNavn.isEmpty()) {
             superhelt.setSuperhelteNavn(superhelteNavn);
         }
         if (!superkræfter.isEmpty()) {
-            superhelt.setStyrker(superkræfter);
+            superhelt.setSuperkræfter(superkræfter);
+        }
+        if (!rigtigeNavn.isEmpty()) {
+            superhelt.setRigtigeNavn(rigtigeNavn);
         }
         if (!erMenneske.isEmpty()) {
             superhelt.setErMenneske(erMenneske);
         }
         if (årSkabt != 0) {
             superhelt.setÅrSkabt(årSkabt);
+        }
+        if (styrker != 0) {
+            superhelt.setStyrke(styrker);
         }
     }
 
