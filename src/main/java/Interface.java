@@ -110,7 +110,6 @@ public class Interface {
                         System.out.println("Forkert input, prøv igen");
                         s.nextLine();
                     }
-
                 }
 
                 System.out.println("Indtast styrke: ");

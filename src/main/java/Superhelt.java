@@ -5,9 +5,9 @@ public class Superhelt {
     private String rigtigeNavn;
     private int årSkabt;
     private String erMenneske;
-    private int styrke;
+    private double styrke;
 
-    public Superhelt(String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, int styrke) {
+    public Superhelt(String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, double styrke) {
         this.superhelteNavn = superhelteNavn;
         this.superkræfter = superkræfter;
         this.rigtigeNavn = rigtigeNavn;
@@ -30,7 +30,7 @@ public class Superhelt {
     public String getErMenneske() {
         return erMenneske;
     }
-    public int getStyrke() {
+    public double getStyrke() {
         return styrke;
     }
 
@@ -52,7 +52,7 @@ public class Superhelt {
     public void setRigtigeNavn(String rigtigeNavn) {
         this.rigtigeNavn = rigtigeNavn;
     }
-    public void setStyrke(int styrke) {
+    public void setStyrke(double styrke) {
         this.styrke = styrke;
     }
 

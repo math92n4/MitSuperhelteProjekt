@@ -5,7 +5,7 @@ public class Database {
     private ArrayList<Superhelt> superhelte = new ArrayList<>();
 
 
-    public void lavSuperhelt(String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, int styrke) {
+    public void lavSuperhelt(String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, double styrke) {
         Superhelt superhelt = new Superhelt(superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
         superhelte.add(superhelt);
     }
@@ -41,7 +41,7 @@ public class Database {
 
     }
 
-    public void redigerSuperhelt(int superhelteId, String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, int styrker) {
+    public void redigerSuperhelt(int superhelteId, String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, double styrker) {
         Superhelt superhelt = superhelte.get(superhelteId - 1);
         if(!superhelteNavn.isEmpty()) {
             superhelt.setSuperhelteNavn(superhelteNavn);
