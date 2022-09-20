@@ -55,7 +55,17 @@ public class Interface {
                 }
 
                 System.out.println("Indtast styrke: ");
-                double styrke = s.nextDouble();
+                boolean validStyrke = false;
+                double styrke = 0;
+                while (!validStyrke) {
+                    try {
+                        styrke = s.nextDouble();
+                        validStyrke = true;
+                    } catch (InputMismatchException e) {
+                        System.out.println("Forkert input, prøv igen");
+                        s.nextLine();
+                    }
+                }
 
                 database.lavSuperhelt(superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
             }
@@ -113,7 +123,17 @@ public class Interface {
                 }
 
                 System.out.println("Indtast styrke: ");
-                double styrke = s.nextDouble();
+                boolean validStyrke = false;
+                double styrke = 0;
+                while (!validStyrke) {
+                    try {
+                        styrke = s.nextDouble();
+                        validStyrke = true;
+                    } catch (InputMismatchException e) {
+                        System.out.println("Forkert input, prøv igen");
+                        s.nextLine();
+                    }
+                }
 
                 database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
 
