@@ -3,12 +3,13 @@ import java.util.Scanner;
 
 public class Interface {
 
-    public void startProgram() {
-
-        Scanner s = new Scanner(System.in);
-        Database database = new Database();
+    Scanner s = new Scanner(System.in);
+    Database database = new Database();
+    private void startProgram() {
 
         System.out.println("Velkommen til superhelteprogrammet");
+    }
+    private void menuvalg() {
         int menuvalg;
 
         do {
@@ -122,7 +123,11 @@ public class Interface {
             }
 
         } while (menuvalg != 9);
-
     }
+    public void start() {
+        startProgram();
+        menuvalg();
+    }
+
 
 }
