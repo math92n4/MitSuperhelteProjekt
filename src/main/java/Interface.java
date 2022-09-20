@@ -55,7 +55,7 @@ public class Interface {
                 }
 
                 System.out.println("Indtast styrke: ");
-                int styrke = s.nextInt();
+                double styrke = s.nextDouble();
 
                 database.lavSuperhelt(superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
             }
@@ -113,7 +113,7 @@ public class Interface {
                 }
 
                 System.out.println("Indtast styrke: ");
-                int styrke = s.nextInt();
+                double styrke = s.nextDouble();
 
                 database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
 
