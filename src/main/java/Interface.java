@@ -6,7 +6,6 @@ public class Interface {
     Scanner s = new Scanner(System.in);
     Database database = new Database();
     private void startProgram() {
-
         System.out.println("Velkommen til superhelteprogrammet");
     }
     private void menuvalg() {
@@ -21,7 +20,6 @@ public class Interface {
             System.out.println("4) Rediger superhelt");
             System.out.println("9) Aflsut");
             System.out.println("----------------------------");
-
 
             menuvalg = s.nextInt();
             s.nextLine();

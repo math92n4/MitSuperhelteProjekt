@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
 
@@ -25,7 +26,11 @@ public class Database {
         }
     }
 
-    public void søgEfterSuperhelt(String superhelteNavn) {
+    public ArrayList<Superhelt> getSuperhelte() {
+        return superhelte;
+    }
+
+    public List<Superhelt> søgEfterSuperhelt(String superhelteNavn) {
 
         for (Superhelt søgning : superhelte) {
             if(søgning.getSuperhelteNavn().equals(superhelteNavn)) {
@@ -38,7 +43,7 @@ public class Database {
             }
 
         }
-
+        return superhelte;
     }
 
     public void redigerSuperhelt(int superhelteId, String superhelteNavn, String superkræfter, String rigtigeNavn, String erMenneske, int årSkabt, double styrker) {
@@ -67,6 +72,10 @@ public class Database {
         for (int i=0; i<superhelte.size(); i++) {
             System.out.println(i+1 + ":" + superhelte.get(i));
         }
+    }
+
+    public void sletSuperhelt() {
+
     }
 
 }
