@@ -136,8 +136,11 @@ public class Interface {
 
                 database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
 
-            } else if (menuvalg == 5){
+            } else if (menuvalg == 5) {
                 System.out.println("Hvilken superhelt skal slettes?");
+                database.printsuperhelteliste();
+                int superhelteIndex = s.nextInt();
+                database.sletSuperhelt(superhelteIndex);
 
             } else if (menuvalg == 9) {
                 System.out.println("Programmet afluttes");

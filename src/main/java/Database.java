@@ -73,8 +73,9 @@ public class Database {
         }
     }
 
-    public void sletSuperhelt() {
-        superhelte.remove(0);
+    public void sletSuperhelt(int superhelteIndex) {
+        Superhelt superhelt = superhelte.get(superhelteIndex - 1);
+        superhelte.remove(superhelt);
     }
 
 }
