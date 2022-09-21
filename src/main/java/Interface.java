@@ -18,6 +18,7 @@ public class Interface {
             System.out.println("2) Oversigt over superhelte");
             System.out.println("3) Søg efter superhelt");
             System.out.println("4) Rediger superhelt");
+            System.out.println("5) Slet superhelt");
             System.out.println("9) Aflsut");
             System.out.println("----------------------------");
 
@@ -134,6 +135,9 @@ public class Interface {
                 }
 
                 database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
+
+            } else if (menuvalg == 5){
+                System.out.println("Hvilken superhelt skal slettes?");
 
             } else if (menuvalg == 9) {
                 System.out.println("Programmet afluttes");

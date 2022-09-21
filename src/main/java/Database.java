@@ -25,7 +25,6 @@ public class Database {
             }
         }
     }
-
     public ArrayList<Superhelt> getSuperhelte() {
         return superhelte;
     }
@@ -75,7 +74,7 @@ public class Database {
     }
 
     public void sletSuperhelt() {
-
+        superhelte.remove(0);
     }
 
 }
