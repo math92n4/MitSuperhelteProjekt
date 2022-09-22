@@ -5,11 +5,13 @@ public class Interface {
 
     Scanner s = new Scanner(System.in);
     Database database = new Database();
+    int menuvalg;
+
     private void startProgram() {
         System.out.println("Velkommen til superhelteprogrammet");
     }
     private void menuvalg() {
-        int menuvalg;
+
 
         do {
 
@@ -22,9 +24,17 @@ public class Interface {
             System.out.println("9) Aflsut");
             System.out.println("----------------------------");
 
-            menuvalg = s.nextInt();
-            s.nextLine();
-            //TODO: try catch
+            boolean validMenuInput = false;
+            int menuvalg = 0;
+            while (!validMenuInput) {
+                try {
+                    menuvalg = s.nextInt();
+                    validMenuInput = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Forkert input, prøv igen");
+                    s.nextLine();
+                }
+            }
 
 
             if (menuvalg == 1) {
@@ -39,15 +49,15 @@ public class Interface {
 
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
-                //TODO: toString, boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
+                // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
-                boolean validInput = false;
+                boolean validÅr = false;
                 int årSkabt = 0;
-                while (!validInput) {
+                while (!validÅr) {
                     try {
                         årSkabt = s.nextInt();
-                        validInput = true;
+                        validÅr = true;
                     } catch (InputMismatchException e) {
                         System.out.println("Forkert input, prøv igen");
                         s.nextLine();
@@ -107,7 +117,7 @@ public class Interface {
 
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
-                //TODO: boolean, toString
+                //TODO: boolean
                 // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
@@ -135,15 +145,25 @@ public class Interface {
                         s.nextLine();
                     }
                 }
-
                 database.redigerSuperhelt(superhelteId, superhelteNavn, superkræfter, rigtigeNavn, erMenneske, årSkabt, styrke);
+
 
             } else if (menuvalg == 5) {
                 System.out.println("Hvilken superhelt skal slettes?");
                 database.printsuperhelteliste();
-                int superhelteIndex = s.nextInt();
+                boolean validIndex = false;
+                int superhelteIndex = 0;
+                while (!validIndex) {
+                    try {
+                        superhelteIndex = s.nextInt();
+                        validIndex = true;
+                    } catch (InputMismatchException e) {
+                        System.out.println("Forkert input, prøv igen");
+                        s.nextLine();
+                    }
+                }
                 database.sletSuperhelt(superhelteIndex);
-                //TODO: try catch
+
 
             } else if (menuvalg == 9) {
                 System.out.println("Programmet afluttes");
