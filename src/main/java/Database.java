@@ -76,6 +76,7 @@ public class Database {
     public void sletSuperhelt(int superhelteIndex) {
         Superhelt superhelt = superhelte.get(superhelteIndex - 1);
         superhelte.remove(superhelt);
+        System.out.println("Superhelten " + superhelt + " blev slettet");
     }
 
 }

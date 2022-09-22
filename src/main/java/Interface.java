@@ -24,6 +24,7 @@ public class Interface {
 
             menuvalg = s.nextInt();
             s.nextLine();
+            //TODO: try catch
 
 
             if (menuvalg == 1) {
@@ -106,6 +107,7 @@ public class Interface {
 
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
+                //TODO: boolean
                 // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
@@ -141,6 +143,7 @@ public class Interface {
                 database.printsuperhelteliste();
                 int superhelteIndex = s.nextInt();
                 database.sletSuperhelt(superhelteIndex);
+                //TODO: try catch
 
             } else if (menuvalg == 9) {
                 System.out.println("Programmet afluttes");
