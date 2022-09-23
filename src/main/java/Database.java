@@ -29,7 +29,6 @@ public class Database {
         return superhelte;
     }
 
-    //TODO: INGEN FUNDET
     public List<Superhelt> søgEfterSuperhelt(String superhelteNavn) {
 
         for (Superhelt søgning : superhelte) {

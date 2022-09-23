@@ -35,6 +35,7 @@ public class Interface {
                     s.nextLine();
                 }
             }
+            s.nextLine();   //scanner bug
 
 
             if (menuvalg == 1) {
@@ -49,7 +50,6 @@ public class Interface {
 
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
-                // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
                 boolean validÅr = false;
@@ -117,8 +117,6 @@ public class Interface {
 
                 System.out.println("Er superhelten et menneske? (ja/nej)");
                 String erMenneske = s.next();
-                //TODO: boolean
-                // boolean menneske = erMenneske.equalsIgnoreCase("ja") ? true : false;
 
                 System.out.println("Indtast året hvor superhelten er skabt: ");
                 boolean validInputÅr = false;
